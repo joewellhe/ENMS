@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rouge2.0-0.2-distribute">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/distribute/downloads/rouge2.0-0.2-distribute.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

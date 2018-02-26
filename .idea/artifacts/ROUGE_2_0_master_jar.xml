@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact name="ROUGE-2.0-master:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ROUGE_2_0_master_jar</output-path>
+    <root id="root">
+      <element id="archive" name="ROUGE-2.0-master.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="ROUGE-2.0-master" />
+      </element>
+      <element id="library" level="project" name="Maven: org.apache.lucene:lucene-snowball:3.0.3" />
+      <element id="library" level="project" name="lib" />
+      <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
+      <element id="library" level="project" name="Maven: com.github.rholder:snowball-stemmer:1.3.0.581.1" />
+      <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:3.0.3" />
+      <element id="library" level="project" name="rouge2.0_0.2" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: lucene-snowball-3.0.3.jar stanford-postagger-3.3.1.jar jaw
+ s-bin.jar log4j-1.2.16.jar lucene-core-3.0.3.jar rouge2.0_0.2.jar
+Main-Class: com.rxnlp.tools.rouge.ROUGECalculator
+
