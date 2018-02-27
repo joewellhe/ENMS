@@ -1,37 +1,39 @@
-# ROUGE-2.0
-ROUGE 2.0 is a Java Package for Evaluation of Summarization Tasks building on the Perl Implementation of ROUGE. ROUGE 2.0 currently supports the following:
+# ENMS
+ENMS mtric is a ngram-based evaluation metric with semantic, the detail description in [Enhancing Ngram-based Metrics with Semantic for Better Evaluation of Abstract TextSummarization](https://arxiv.org/submit/2177410/view).
+Our ENMS package is based on [ROUGE 2.0](https://github.com/RxNLP/ROUGE-2.0)
 
-- Evaluation of ROUGE-N (unigram, bigrams, trigrams, etc)
-- Stemming for different languages
-- Stopword removal with customizable stop words
-- Evaluation of unicode texts (e.g. Persian)
-- Synonyms capture for better agreement between system and reference summaries [English only and requires WordNet installation]
-- Evaluation of specific parts of speech (e.g. NN) [Uses Stanford POS Tagger]
+We add some field in rouge.properties, for ` rouge.metric`, it determines what ROUGE we choose.
 
-This is an open-source project, so if you want to implement other measures, please read the [documentation](#contributing-to-rouge20) on how to contribute to this project.  
+e.g. `rouge.metric=SEMI-RN` represent we use semi-rouge-n metric, these metrics we can choose as followed:
 
-## Quick Start
-To start evaluating your summaries using ROUGE, just download the [complete ROUGE 2.0 distribution](distribute/downloads) and follow the [usage instructions](http://www.rxnlp.com/rouge-2-0-usage-documentation/). Please use Java 1.8 and above to run the ROUGE 2.0 package. 
 
-To build on the source code or make contributions, please read the installation instructions below.
+- N for ROUGE-N
+- SU for ROUGE-SU4
+- L for ROUGE-L
+- SEMI-RN for SMEI-ROUGE-N
+- SRN for Soft-ROUGE-N
+- SEMI-RSU for SEMI-ROUGE-SU4
+- S-RSU for Soft-Rouge-SU4
+ 
+Note that if you use SU OR L, ngram is a invalid field
+
+For `alpha` field, it is a similarity parameter.
+
+e.g. `alpha=0.75`
+
+For `embedding` field, it determin the embedding file we use.
+
+e.g. `embedding=small_embedding.txt`
+
+
 
 ## Installation
+This section is the same with  installation in [ROUGE 2.0](https://github.com/RxNLP/ROUGE-2.0)
 
-To build on the source code of ROUGE 2.0, [clone the repository](https://github.com/RxNLP/ROUGE-2.0.git) and import the project as a Maven project by selecting the `pom.xml` file in the root directory from Eclipse, IntelliJ or other IDE's. Next, add the jars under the `lib` directory to your build path for the code to compile. Note that you can also install the jars in the `lib` directory by creating a local maven repository for those jar files. All you would need to do after that is to add the local dependencies to your `pom.xml`.
+## Data
+The data we use is AESOP task of TAC 2011.
+In this pacakge, we just provide a simply case to run our ENMS package, if you want to verify the result in   [Enhancing Ngram-based Metrics with Semantic for Better Evaluation of Abstract TextSummarization](https://arxiv.org/submit/2177410/view), you should get access for TAC data 2011. You can get TAC data in [Past TAC Data](https://tac.nist.gov/data/index.html).
 
-## Download / Links
-- [ROUGE 2.0 Downloadable Package](distribute/downloads)
-- [ROUGE 2.0 Usage Documentation](http://www.rxnlp.com/rouge-2-0-usage-documentation/)
-- [Source Code](https://github.com/RxNLP/ROUGE-2.0)
+## Contact with us
+Any question about ENMS package, you can send e-mail to hejiawei@hnu.edu.cn
 
-## Contributing to ROUGE 2.0
-
-### Reporting issues
-
-When reporting issues please use "Github Issues" and include as much detail as possible about your operating system and java version. Whenever possible, please also include a brief, self-contained code example that demonstrates the problem. Visuals are appreciated!
-
-### Contributing code
-
-Thanks for your interest in contributing code to ROUGE2.0! To contribute code to ROUGE2.0, please create a new branch and submit a pull request early on with your ideas and planned changes or enhancement. Once you get the thumbs up, you can use your usual workflow for development. Your changes will be reviewed and finally accepted for inclusion. Please use meaningful commit messages that intuitively explain what you are trying to achieve.
-
-If you are proposing new evaluation measures, your changes will be included once your paper is accepted at a conference or journal. 
