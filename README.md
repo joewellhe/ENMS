@@ -1,3 +1,6 @@
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
+
 # ENMS
 ENMS mtric is a ngram-based evaluation metric with semantic, the detail description in [Enhancing Ngram-based Metrics with Semantic for Better Evaluation of Abstract TextSummarization](https://arxiv.org/submit/2177410/view).
 Our ENMS package is based on [ROUGE 2.0](https://github.com/RxNLP/ROUGE-2.0)
